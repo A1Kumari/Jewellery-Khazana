@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+        
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.fancy-title {
+    font-family: Aguila;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #8B4513;
+}
+
+.category-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 4px;
+}
+
+.pagination-dot {
+    height: 8px;
+    width: 8px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.pagination-dot.active {
+    background-color: #000;
+}
+
+.gold-gradient {
+    background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #B38728 100%);
+}
+
+.buy-now-btn {
+    background: linear-gradient(135deg, #D4AF37 0%, #C5A028 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cart-btn {
+    background-color: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discount-tag {
+    background-color: #C5A028;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.dimension-tag {
+    background-color: #007BFF;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.service-card {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.footer-section {
+    margin-bottom: 24px;
+}
+
+.footer-title {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.footer-link {
+    color: #666;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 8px;
+}
+
+.payment-icon {
+    height: 24px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 4px;
+}
+
+.bengali-text {
+    font-family: 'Noto Sans Bengali', sans-serif;
+}
