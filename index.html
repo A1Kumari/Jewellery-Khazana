@@ -5,71 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jewellery Khazana</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body class="bg-white">
-
+<body class="bg-[#f8f8f8]">
     <!-- Navigation Bar -->
-    <div class="flex justify-between items-center p-4">
-        <button class="text-2xl">☰</button>
-        <button class="text-2xl">🔍</button>
+    <div class="flex justify-between items-center p-4 px-6">
+        <div class="flex space-x-6">
+            <button class="text-2xl"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            <button class="text-2xl"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+        
         <div class="flex-1 flex justify-center">
-            <img src="assests/logo.png" alt="Jewellery Khazana Logo" class="h-10">
+            <img src="assests/logo.png" alt="Jewellery Khazana Logo" class="h-14"> <!-- Increased Logo Size -->
         </div>
-        <div class="relative">
-            <button class="text-2xl">🛒</button>
-            <span class="absolute -top-1 -right-1 bg-yellow-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+        
+        <div class="flex space-x-6">
+            <div class="relative">
+                <button class="text-2xl"><i class="fa-solid fa-cart-shopping"></i></button>
+                <span class="absolute -top-1 -right-1 bg-yellow-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+            </div>
+            <button class="text-2xl"><i class="fa fa-user-circle" aria-hidden="true"></i></button>
         </div>
-        <button class="text-2xl">👤</button>
     </div>
     
+    
     <!-- Main Banner -->
-    <div class="bg-red-900 text-white p-4 pt-8 pb-12">
-        <h1 class="fancy-title text-4xl text-center mb-2">Jewellery Khazana</h1>
+    <div class="bg-gradient-to-b from-[#720000] to-[#4b0000] text-white p-4 pt-8 pb-12">
+        <h1 class="fancy-title text-5xl font-semibold text-center mb-2 tracking-wider">Jewellery Khazana</h1>
         <p class="text-center text-sm mb-6">Exclusive 24KT gold plated jewellery store</p>
         
         <div class="flex justify-center gap-4 mb-8">
-            <button class="gold-gradient text-black px-6 py-2 rounded-full font-medium">Shop Now</button>
-            <button class="bg-transparent border border-white text-white px-6 py-2 rounded-full">Best Sellers</button>
+            <button class="gold-gradient text-black px-6 py-2 rounded-full font-medium transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">Shop Now</button>
+            <button class="bg-transparent border border-white text-white px-6 py-2 rounded-full  transition-transform duration-300 ease-in-out hover:bg-white hover:text-black hover:shadow-lg hover:scale-105">Best Sellers</button>
         </div>
-        
-        <!-- Model Image - Using placeholder for compliance -->
+        <!-- Model Image - Centered & Responsive -->
         <div class="relative flex justify-center">
-            <!-- <div class="absolute top-0 w-full flex justify-center">
-                <div class="w-32 h-8 bg-gray-300 rounded-t-lg"></div>
-            </div> -->
-            <img src="./assests//Screenshot_1 - Copia (1) (1).png" alt="Traditional Jewellery Model" class="rounded-lg">
-            <!-- <div class="absolute bottom-0 left-0 right-0 flex justify-center">
-                <div class="gold-gradient w-32 h-1 mb-4"></div>
-            </div> -->
-        </div>
+            <img src="./assests/Home.png" alt="Traditional Jewellery Model" 
+        class="rounded-lg w-[60%] max-w-[300px] md:w-[70%] lg:w-[50%] h-auto">
+    </div>
+
     </div>
     
     <!-- Categories Menu -->
-    <div class="bg-white rounded-t-3xl -mt-6 p-4 pt-6">
+    <div class="bg-white  w-[85%] mx-auto rounded-3xl -mt-14 p-4 pt-6 z-10 relative">
         <div class="grid grid-cols-5 gap-4 mb-6">
             <div class="category-item">
-                <img src="./assests/Grupo 165335.png" alt="Bangles" class="category-icon">
-                <span class="text-xs">Bangles</span>
+                <img src="./assests//União 202.png" alt="Bangles" class="category-icon">
+                <span class="text-xs font-semibold">Bangles</span>
             </div>
             <div class="category-item">
-                <img src="./assests//Grupo 165355.png" alt="Chains" class="category-icon">
-                <span class="text-xs">Chains</span>
+                <img src="./assests/Grupo 165335.png" alt="Chains" class="category-icon">
+                <span class="text-xs font-semibold">Chains</span>
             </div>
             <div class="category-item">
-                <img src="./assests/União 197.png" alt="Chokers" class="category-icon">
-                <span class="text-xs">Chokers</span>
+                <img src=" ./assests/União 197.png" alt="Chokers" class="category-icon">
+                <span class="text-xs font-semibold">Chokers</span>
             </div>
             <div class="category-item">
-                <img src="./assests//União 202.png" alt="Chur" class="category-icon">
-                <span class="text-xs">Chur</span>
+                <img src="./assests//Grupo 165355.png" alt="Chur" class="category-icon">
+                <span class="text-xs font-semibold">Chur</span>
             </div>
             <div class="category-item">
                 <img src="https://via.placeholder.com/36/FFD700?text=E" alt="Earrings" class="category-icon">
-                <span class="text-xs">Earrings</span>
+                <span class="text-xs font-semibold">Earrings</span>
+            </div>
+            <div class="category-item">
+                <img src="./assests/Grupo 165335.png" alt="Chains" class="category-icon">
+                <span class="text-xs font-semibold">Lahari</span>
+            </div>
+            <div class="category-item">
+                <img src=" ./assests/União 197.png" alt="Chokers" class="category-icon">
+                <span class="text-xs font-semibold">Mantasha</span>
+            </div>
+            <div class="category-item">
+                <img src="./assests/Grupo 165335.png" alt="Chains" class="category-icon">
+                <span class="text-xs font-semibold">Sankha & Pola</span>
+            </div>
+            <div class="category-item">
+                <img src=" ./assests/União 197.png" alt="Chokers" class="category-icon">
+                <span class="text-xs font-semibold">Sitahar</span>
             </div>
         </div>
-        
+    
         <!-- Pagination Dots -->
         <div class="flex justify-center mb-4">
             <span class="pagination-dot active"></span>
@@ -80,18 +98,22 @@
         </div>
     </div>
     
+    
     <!-- Best Sellers Section -->
-    <div class="px-4 py-6">
-        <div class="flex justify-between items-center mb-4">
-            <h2 class="text-xl font-bold">Best Sellers</h2>
-            <a href="#" class="gold-gradient text-sm px-4 py-2 rounded-full">See all products</a>
+    <div class="px-4 py-6 w-[85%] mx-auto">
+        <div class="flex justify-between items-center mb-10">
+            <h2 class="text-[38px] font-semibold leading-[100%] tracking-[0%] font-[Aguila] mr-[15px]">
+                Best Sellers
+            </h2>
+            <div class="flex-1 border-t border-gray-300 w-[90%] mx-auto"></div>
+            <a href="#" class="gold-gradient text-sm px-4 py-2 rounded-full ml-[15px]">See all products</a>
         </div>
         
-        <div class="product-grid">
+        <div class="product-grid grid grid-cols-2 md:grid-cols-3 gap-6">
             <!-- Product 1 -->
-            <div class="relative mb-4">
+            <div class="relative w-80 h-100">
                 <div class="relative">
-                    <img src="./assests/1 1.png" alt="Gold Coins" class="w-full h-44 object-cover rounded-lg">
+                    <img src="./assests/1 1.png" alt="Gold Coins" class="w-full h-80 object-cover rounded-lg">
                     <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
                         <button class="buy-now-btn">Buy Now</button>
                         <button class="cart-btn">🛒</button>
@@ -107,9 +129,9 @@
             </div>
             
             <!-- Product 2 -->
-            <div class="relative mb-4">
+            <div class="relative w-80 h-100">
                 <div class="relative">
-                    <img src="./assests/Retângulo 2398 (1).png" alt="Gold Bangles" class="w-full h-44 object-cover rounded-lg">
+                    <img src="./assests/Retângulo 2398 (1).png" alt="Gold Bangles" class="w-full h-80 object-cover rounded-lg">
                     <div class="discount-tag">10% OFF</div>
                     <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
                         <button class="buy-now-btn">Buy Now</button>
@@ -127,9 +149,9 @@
             </div>
             
             <!-- Product 3 -->
-            <div class="relative mb-4">
+            <div class="relative w-80 h-100">
                 <div class="relative">
-                    <img src="./assests/Retângulo 2398.png" alt="Gold Bangles" class="w-full h-44 object-cover rounded-lg">
+                    <img src="./assests/Retângulo 2398.png" alt="Gold Bangles" class="w-full h-80 object-cover rounded-lg">
                     <div class="dimension-tag">25 × 16</div>
                     <div class="discount-tag">10% OFF</div>
                     <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
@@ -147,9 +169,9 @@
             </div>
             
             <!-- Product 4 -->
-            <div class="relative mb-4">
+            <div class="relative w-80 h-100">
                 <div class="relative">
-                    <img src="./assests//Retângulo 2398 1.png" alt="Gold Necklace" class="w-full h-44 object-cover rounded-lg">
+                    <img src="./assests//Retângulo 2398 1.png" alt="Gold Necklace" class="w-full h-80 object-cover rounded-lg">
                     <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
                         <button class="buy-now-btn">Buy Now</button>
                         <button class="cart-btn">🛒</button>
@@ -176,32 +198,32 @@
     </div>
     
     <!-- Services Section -->
-    <div class="px-4 py-4">
-        <div class="bg-amber-200 rounded-lg p-3">
+    <div class="px-4 py-4 w-[85%] mx-auto">
+        <div class="rounded-3xl p-3" style="background: linear-gradient(178.27deg, #E9C48C -20.99%, #C38D3E 153.22%);">
             <!-- Free Shipping -->
             <div class="service-card">
-                <div class="service-icon">🚚</div>
+                <div class="service-icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
                 <div>
-                    <h3 class="font-bold text-sm">FREE SHIPPING</h3>
-                    <p class="text-xs">Free Shipping $50+</p>
+                    <h3 class="font-bold text-sm inter-text1">FREE SHIPPING</h3>
+                    <p class="text-xs inter-text">Free Shipping $50+</p>
                 </div>
             </div>
             
             <!-- Money Back -->
             <div class="service-card">
-                <div class="service-icon">💰</div>
+                <div class="service-icon"><i class="fa fa-usd" aria-hidden="true"></i></div>
                 <div>
-                    <h3 class="font-bold text-sm">MONEY BACK</h3>
-                    <p class="text-xs">100% Money Back Guarantee</p>
+                    <h3 class="font-bold text-sm inter-text1">MONEY BACK</h3>
+                    <p class="text-xs inter-text">100% Money Back Guarantee</p>
                 </div>
             </div>
             
             <!-- 24H Support -->
             <div class="service-card">
-                <div class="service-icon">🎧</div>
+                <div class="service-icon"><i class="fa fa-headphones" aria-hidden="true"></i></div>
                 <div>
-                    <h3 class="font-bold text-sm">24H SUPPORT</h3>
-                    <p class="text-xs">Customer Support Service</p>
+                    <h3 class="font-bold text-sm inter-text1">24H SUPPORT</h3>
+                    <p class="text-xs inter-text">Customer Support Service</p>
                 </div>
             </div>
         </div>
@@ -515,15 +537,15 @@
         
         <!-- Payment Methods -->
         <div class="flex flex-wrap justify-center my-6">
-            <img src="https://via.placeholder.com/50x20/FFFFFF/000000?text=stripe" alt="Stripe" class="payment-icon">
-            <img src="https://via.placeholder.com/50x20/FFFFFF/000000?text=Apple" alt="Apple Pay" class="payment-icon">
-            <img src="https://via.placeholder.com/50x20/FFFFFF/000000?text=Amex" alt="American Express" class="payment-icon">
-            <img src="https://via.placeholder.com/50x20/FFFFFF/000000?text=MC" alt="Mastercard" class="payment-icon">
-            <img src="https://via.placeholder.com/50x20/FFFFFF/000000?text=PayPal" alt="PayPal" class="payment-icon">
-            <img src="https://via.placeholder.com/50x20/FFFFFF/000000?text=Gpay" alt="Google Pay" class="payment-icon">
-            <img src="https://via.placeholder.com/50x20/FFFFFF/000000?text=Visa" alt="Visa" class="payment-icon">
-            <img src="https://via.placeholder.com/50x20/FFFFFF/000000?text=Skrill" alt="Skrill" class="payment-icon">
-            <img src="https://via.placeholder.com/50x20/FFFFFF/000000?text=Amazon" alt="Amazon Pay" class="payment-icon">
+            <img src="./assests/Grupo 163576.png" alt="Stripe" class="payment-icon">
+            <img src="./assests/Grupo 163578.png" alt="Apple Pay" class="payment-icon">
+            <img src="./assests/Grupo 163577.png" alt="American Express" class="payment-icon">
+            <img src="./assests/Grupo 163580.png" alt="Mastercard" class="payment-icon">
+            <img src="./assests/Grupo 163581.png" alt="PayPal" class="payment-icon">
+            <img src="./assests/Grupo 163579.png" alt="Google Pay" class="payment-icon">
+            <img src="./assests/Grupo 163583.png" alt="Visa" class="payment-icon">
+            <img src="./assests/Grupo 163585.png" alt="Skrill" class="payment-icon">
+            <img src="./assests/Grupo 163584.png" alt="Amazon Pay" class="payment-icon">
         </div>
         
         <!-- Copyright -->
