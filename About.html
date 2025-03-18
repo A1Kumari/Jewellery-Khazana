@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Jewelry Business</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f5f0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .our-values {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 32px;
+        }
+        
+        .values-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .value-card {
+            width: 23%;
+            margin-bottom: 30px;
+            background-color: #f9f5f0;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #ffd700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .value-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .story-section {
+            padding: 80px 0;
+        }
+        
+        .story-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .story-image {
+            flex: 1;
+        }
+        
+        .story-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .story-text {
+            flex: 1;
+        }
+        
+        .story-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .story-text p {
+            margin-bottom: 20px;
+        }
+        
+        .team-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .team-member {
+            text-align: center;
+        }
+        
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        
+        .team-member h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .team-member p {
+            color: #666;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .value-card {
+                width: 48%;
+            }
+            
+            .story-content {
+                flex-direction: column;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .value-card {
+                width: 100%;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Jewelry Brand</div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="about-us">
+        <div class="about-content">
+          <h2>About Us</h2>
+          <p>We offer a wide range of products, from simple and elegant pieces to more statement making items, and we are always adding new and exciting pieces to our collection.</p>
+          
+          <p>We are passionate about our work, and we take pride in providing our customers with high quality, stylish jewellery.</p>
+          
+          <p>We hope you enjoy browsing our collection, and we look forward to helping you find the perfect piece of jewellery to add to your collection.</p>
+          
+          <div class="bengali-logo">
+            <span>জয়েলারি</span>
+            <span>খাজানা</span>
+          </div>
+        </div>
+      </section>
+      
+      <style>
+      .about-us {
+        position: relative;
+        background-image: url('/api/placeholder/600/800');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        color: white;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      
+      .about-us::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+      }
+      
+      .about-content {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+        max-width: 90%;
+      }
+      
+      .about-content h2 {
+        font-size: 36px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        font-family: 'Times New Roman', serif;
+      }
+      
+      .about-content p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      
+      .bengali-logo {
+        margin-top: 40px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Hind Siliguri', sans-serif;
+        font-size: 24px;
+        padding: 20px;
+      }
+      
+      .bengali-logo::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #D4AF37;
+        transform: rotate(-5deg);
+        z-index: -1;
+      }
+      
+      .bengali-logo::after {
+        content: "";
+        position: absolute;
+        width: 110%;
+        height: 110%;
+        border: 2px solid #D4AF37;
+        transform: rotate(5deg);
+        z-index: -1;
+      }
+      
+      @media (max-width: 768px) {
+        .about-content h2 {
+          font-size: 30px;
+        }
+        
+        .about-content p {
+          font-size: 14px;
+        }
+        
+        .bengali-logo {
+          font-size: 20px;
+        }
+      }
+      </style>
+    <section class="hero">
+        <div class="container">
+            <h1>About Our Jewelry</h1>
+            <p>Discover the story behind our passion for creating beautiful, affordable jewelry that celebrates individuality and craftsmanship.</p>
+        </div>
+    </section>
+    
+    <section class="our-values">
+        <div class="container">
+            <h2 class="section-title">Our Values</h2>
+            <div class="values-container">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <!-- Icon placeholder -->
+                        ✨
+                    </div>
+                    <h3 class="value-title">Young & Vibrant</h3>
+                    <p>We are a young and vibrant company specializing in copper-based, gold-plated jewellery.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <!-- Icon placeholder -->
+                        🎨
+                    </div>
+                    <h3 class="value-title">Unique Pieces</h3>
+                    <p>Our pieces are unique and beautiful, and our goal is to provide our customers with the best possible shopping experience.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <!-- Icon placeholder -->
+                        💰
+                    </div>
+                    <h3 class="value-title">Affordable</h3>
+                    <p>We believe that jewellery should be fun and affordable.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <!-- Icon placeholder -->
+                        ⭐
+                    </div>
+                    <h3 class="value-title">Best Value</h3>
+                    <p>We are committed to offering our customers the best possible value for their money.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="/api/placeholder/600/400" alt="Our jewelry crafting process">
+                </div>
+                <div class="story-text">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2020, our jewelry brand was born from a passion for creating accessible yet beautiful pieces that everyone can enjoy. What started as a small workshop has now grown into a beloved brand with customers across the country.</p>
+                    <p>Every piece we create is handcrafted with care and attention to detail. We source our materials ethically and work with skilled artisans who share our vision for quality and beauty.</p>
+                    <p>Our journey is just beginning, and we're excited to continue growing and bringing our unique designs to jewelry lovers everywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="/api/placeholder/200/200" alt="Team member">
+                    <h3>Priya Sharma</h3>
+                    <p>Founder & Lead Designer</p>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/200/200" alt="Team member">
+                    <h3>Arjun Patel</h3>
+                    <p>Master Craftsman</p>
+                </div>
+                <div class="team-member">
+                    <img src="/api/placeholder/200/200" alt="Team member">
+                    <h3>Nisha Reddy</h3>
+                    <p>Customer Experience Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jewelry Brand. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Products</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .result-count {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .filter-btn {
+            background-color: #d9a561;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        
+        .filter-btn::before {
+            content: "▼";
+            margin-right: 8px;
+            font-size: 10px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .product-card {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .product-img-container {
+            position: relative;
+        }
+        
+        .discount-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #a8232d;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .small-text {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 10px;
+            background-color: rgba(0,0,0,0.5);
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        
+        .small-text-right {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+            font-size: 10px;
+            background-color: rgba(0,0,0,0.5);
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        
+        .product-details {
+            padding: 10px;
+        }
+        
+        .product-title {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .product-price {
+            display: flex;
+            align-items: center;
+        }
+        
+        .original-price {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        
+        .discounted-price {
+            color: #a8232d;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        .buy-btn {
+            background-color: #d9a561;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .cart-btn {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        
+        .wishlist-btn {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        .btn-group {
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Product options section */
+        .product-options {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .option-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+        
+        .option-label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .option-value {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+        
+        .option-value::after {
+            content: "▼";
+            margin-left: 5px;
+            font-size: 10px;
+        }
+        
+        .color-circle {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #d9a561;
+            margin-right: 5px;
+        }
+        
+        .add-to-cart-btn {
+            background: linear-gradient(to right, #d9a561, #e8c286);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .purchase-price {
+            position: absolute;
+            left: 10px;
+            color: #333;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="result-count">Items: 82 Found</div>
+        <button class="filter-btn">Filter By</button>
+    </div>
+    
+    <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="/api/placeholder/400/300" alt="Gold Bracelet" class="product-img" style="background-color: #800020;">
+                <div class="small-text">স্পেশাল অফার</div>
+                <div class="small-text-right">সর্বাধিক বিক্রিত</div>
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">Product item title name</h3>
+                <div class="product-price">
+                    <span class="original-price">$100</span>
+                    <span class="discounted-price">$80</span>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="buy-btn">Buy Now</button>
+                <div class="cart-btn">🛒</div>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="/api/placeholder/400/300" alt="Gold Earrings" class="product-img" style="background-color: #004d00;">
+                <div class="discount-tag">10% OFF</div>
+                <div class="small-text-right">সর্বাধিক বিক্রিত</div>
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">Product item title name</h3>
+                <div class="product-price">
+                    <span class="original-price">$100</span>
+                    <span class="discounted-price">$80</span>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="buy-btn">Buy Now</button>
+                <div class="btn-group">
+                    <div class="wishlist-btn">❤️</div>
+                    <div class="cart-btn">🛒</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 3 - With Options -->
+        <div class="product-card">
+            <div class="product-options">
+                <div class="option-row">
+                    <span class="option-label">Size:</span>
+                    <span class="option-value">24</span>
+                </div>
+                <div class="option-row">
+                    <span class="option-label">Color:</span>
+                    <span class="option-value">
+                        <span class="color-circle"></span>
+                        Gold
+                    </span>
+                </div>
+                <div class="option-row">
+                    <span class="option-label">Quantity:</span>
+                    <span class="option-value">01</span>
+                </div>
+                
+                <button class="add-to-cart-btn">
+                    <span class="purchase-price">$70</span>
+                    <span style="margin-left: 60px;">BUY NOW</span>
+                </button>
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">Product item title name</h3>
+                <div class="product-price">
+                    <span class="original-price">$100</span>
+                    <span class="discounted-price">$80</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="/api/placeholder/400/300" alt="Gold Necklace" class="product-img" style="background-color: #4b0082;">
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">Product item title name</h3>
+                <div class="product-price">
+                    <span class="original-price">$100</span>
+                    <span class="discounted-price">$80</span>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="buy-btn">Buy Now</button>
+                <div class="cart-btn">🛒</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

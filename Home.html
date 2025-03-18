@@ -47,54 +47,15 @@
 
     </div>
     
-    <!-- Categories Menu -->
-    <div class="bg-white  w-[85%] mx-auto rounded-3xl -mt-14 p-4 pt-6 z-10 relative">
-        <div class="grid grid-cols-5 gap-4 mb-6">
-            <div class="category-item">
-                <img src="./assests//União 202.png" alt="Bangles" class="category-icon">
-                <span class="text-xs font-semibold">Bangles</span>
-            </div>
-            <div class="category-item">
-                <img src="./assests/Grupo 165335.png" alt="Chains" class="category-icon">
-                <span class="text-xs font-semibold">Chains</span>
-            </div>
-            <div class="category-item">
-                <img src=" ./assests/União 197.png" alt="Chokers" class="category-icon">
-                <span class="text-xs font-semibold">Chokers</span>
-            </div>
-            <div class="category-item">
-                <img src="./assests//Grupo 165355.png" alt="Chur" class="category-icon">
-                <span class="text-xs font-semibold">Chur</span>
-            </div>
-            <div class="category-item">
-                <img src="https://via.placeholder.com/36/FFD700?text=E" alt="Earrings" class="category-icon">
-                <span class="text-xs font-semibold">Earrings</span>
-            </div>
-            <div class="category-item">
-                <img src="./assests/Grupo 165335.png" alt="Chains" class="category-icon">
-                <span class="text-xs font-semibold">Lahari</span>
-            </div>
-            <div class="category-item">
-                <img src=" ./assests/União 197.png" alt="Chokers" class="category-icon">
-                <span class="text-xs font-semibold">Mantasha</span>
-            </div>
-            <div class="category-item">
-                <img src="./assests/Grupo 165335.png" alt="Chains" class="category-icon">
-                <span class="text-xs font-semibold">Sankha & Pola</span>
-            </div>
-            <div class="category-item">
-                <img src=" ./assests/União 197.png" alt="Chokers" class="category-icon">
-                <span class="text-xs font-semibold">Sitahar</span>
-            </div>
+    <div class="bg-white w-[85%] mx-auto rounded-3xl -mt-14 p-4 pt-6 z-10 relative">
+        <!-- Container where JS will inject categories -->
+        <div class="grid grid-cols-5 gap-4 mb-6" id="category-container">
+            <!-- JS will insert categories dynamically here -->
         </div>
     
         <!-- Pagination Dots -->
-        <div class="flex justify-center mb-4">
-            <span class="pagination-dot active"></span>
-            <span class="pagination-dot"></span>
-            <span class="pagination-dot"></span>
-            <span class="pagination-dot"></span>
-            <span class="pagination-dot"></span>
+        <div class="flex justify-center mb-4" id="pagination-dots">
+            <!-- JS will insert pagination dots here -->
         </div>
     </div>
     
@@ -104,6 +65,137 @@
         <div class="flex justify-between items-center mb-10">
             <h2 class="text-[38px] font-semibold leading-[100%] tracking-[0%] font-[Aguila] mr-[15px]">
                 Best Sellers
+            </h2>
+            <div class="flex-1 border-t border-gray-300 w-[90%] mx-auto"></div>
+            <a href="#" class="gold-gradient text-sm px-4 py-2 rounded-full ml-[15px]">See all products</a>
+        </div>
+        
+        <div class="product-grid grid grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Product 1 -->
+            <div class="relative w-80 h-100">
+                <div class="relative">
+                    <img src="./assests/Chain-Thumbnail-300x300.webp" alt="Gold Coins" class="w-full h-80 object-cover rounded-lg">
+                    <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
+                        <button class="buy-now-btn">Buy Now</button>
+                        <button class="cart-btn">🛒</button>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <p class="text-sm font-medium">Product item title name</p>
+                    <div class="flex items-center">
+                        <p class="text-xs line-through text-gray-500">₹100</p>
+                        <p class="text-sm font-bold text-blue-600 ml-1">₹80</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="relative w-80 h-100">
+                <div class="relative">
+                    <img src="./assests/necklace.webp" alt="Gold Bangles" class="w-full h-80 object-cover rounded-lg">
+                    <div class="discount-tag">10% OFF</div>
+                    <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
+                        <button class="buy-now-btn">Buy Now</button>
+                        <button class="cart-btn">🛒</button>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <p class="text-sm font-medium">Product item title name</p>
+                    <div class="flex items-center">
+                        <p class="text-xs line-through text-gray-500">₹100</p>
+                        <p class="text-sm font-bold text-blue-600 ml-1">₹80</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="relative w-80 h-100">
+                <div class="relative">
+                    <img src="./assests/Sitahar-Thumbnail-300x300.webp" alt="Gold Bangles" class="w-full h-80 object-cover rounded-lg">
+                    <div class="discount-tag">10% OFF</div>
+                    <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
+                        <button class="buy-now-btn">Buy Now</button>
+                        <button class="cart-btn">🛒</button>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <p class="text-sm font-medium">Product item title name</p>
+                    <div class="flex items-center">
+                        <p class="text-xs line-through text-gray-500">₹100</p>
+                        <p class="text-sm font-bold text-blue-600 ml-1">₹80</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="relative w-80 h-100">
+                <div class="relative">
+                    <img src="./assests/Tiara-Tikli.webp" alt="Gold Necklace" class="w-full h-80 object-cover rounded-lg">
+                    <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
+                        <button class="buy-now-btn">Buy Now</button>
+                        <button class="cart-btn">🛒</button>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <p class="text-sm font-medium">Product item title name</p>
+                    <div class="flex items-center">
+                        <p class="text-xs line-through text-gray-500">₹100</p>
+                        <p class="text-sm font-bold text-blue-600 ml-1">₹80</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pagination Dots -->
+        <div class="flex justify-center my-4">
+            <span class="pagination-dot active"></span>
+            <span class="pagination-dot"></span>
+            <span class="pagination-dot"></span>
+            <span class="pagination-dot"></span>
+            <span class="pagination-dot"></span>
+        </div>
+    </div>
+    
+    <!-- Services Section -->
+    <div class="service-container w-[85%] mx-auto">
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-shipping-fast"></i>
+            </div>
+            <div class="service-text">
+                <h3>FREE SHIPPING</h3>
+                <p>Free Shipping $50+</p>
+            </div>
+        </div>
+    
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="service-text">
+                <h3>MONEY BACK</h3>
+                <p>100% Money Back Guarantee</p>
+            </div>
+        </div>
+    
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-headset"></i>
+            </div>
+            <div class="service-text">
+                <h3>24H SUPPORT</h3>
+                <p>Customer Support Service</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+     <!-- New arrivals Section -->
+     <div class="px-4 py-6 w-[85%] mx-auto">
+        <div class="flex justify-between items-center mb-10">
+            <h2 class="text-[38px] font-semibold leading-[100%] tracking-[0%] font-[Aguila] mr-[15px]">
+                New Arrivals
             </h2>
             <div class="flex-1 border-t border-gray-300 w-[90%] mx-auto"></div>
             <a href="#" class="gold-gradient text-sm px-4 py-2 rounded-full ml-[15px]">See all products</a>
@@ -172,134 +264,6 @@
             <div class="relative w-80 h-100">
                 <div class="relative">
                     <img src="./assests//Retângulo 2398 1.png" alt="Gold Necklace" class="w-full h-80 object-cover rounded-lg">
-                    <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
-                        <button class="buy-now-btn">Buy Now</button>
-                        <button class="cart-btn">🛒</button>
-                    </div>
-                </div>
-                <div class="mt-2">
-                    <p class="text-sm font-medium">Product item title name</p>
-                    <div class="flex items-center">
-                        <p class="text-xs line-through text-gray-500">₹100</p>
-                        <p class="text-sm font-bold text-blue-600 ml-1">₹80</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Pagination Dots -->
-        <div class="flex justify-center my-4">
-            <span class="pagination-dot active"></span>
-            <span class="pagination-dot"></span>
-            <span class="pagination-dot"></span>
-            <span class="pagination-dot"></span>
-            <span class="pagination-dot"></span>
-        </div>
-    </div>
-    
-    <!-- Services Section -->
-    <div class="px-4 py-4 w-[85%] mx-auto">
-        <div class="rounded-3xl p-3" style="background: linear-gradient(178.27deg, #E9C48C -20.99%, #C38D3E 153.22%);">
-            <!-- Free Shipping -->
-            <div class="service-card">
-                <div class="service-icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                <div>
-                    <h3 class="font-bold text-sm inter-text1">FREE SHIPPING</h3>
-                    <p class="text-xs inter-text">Free Shipping $50+</p>
-                </div>
-            </div>
-            
-            <!-- Money Back -->
-            <div class="service-card">
-                <div class="service-icon"><i class="fa fa-usd" aria-hidden="true"></i></div>
-                <div>
-                    <h3 class="font-bold text-sm inter-text1">MONEY BACK</h3>
-                    <p class="text-xs inter-text">100% Money Back Guarantee</p>
-                </div>
-            </div>
-            
-            <!-- 24H Support -->
-            <div class="service-card">
-                <div class="service-icon"><i class="fa fa-headphones" aria-hidden="true"></i></div>
-                <div>
-                    <h3 class="font-bold text-sm inter-text1">24H SUPPORT</h3>
-                    <p class="text-xs inter-text">Customer Support Service</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-     <!-- New arrivals Section -->
-     <div class="px-4 py-6">
-        <div class="flex justify-between items-center mb-4">
-            <h2 class="text-xl font-bold">Best Sellers</h2>
-            <a href="#" class="gold-gradient text-sm px-4 py-2 rounded-full">See all products</a>
-        </div>
-        
-        <div class="product-grid">
-            <!-- Product 1 -->
-            <div class="relative mb-4">
-                <div class="relative">
-                    <img src="./assests/1 1.png" alt="Gold Coins" class="w-full h-44 object-cover rounded-lg">
-                    <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
-                        <button class="buy-now-btn">Buy Now</button>
-                        <button class="cart-btn">🛒</button>
-                    </div>
-                </div>
-                <div class="mt-2">
-                    <p class="text-sm font-medium">Product item title name</p>
-                    <div class="flex items-center">
-                        <p class="text-xs line-through text-gray-500">₹100</p>
-                        <p class="text-sm font-bold text-blue-600 ml-1">₹80</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Product 2 -->
-            <div class="relative mb-4">
-                <div class="relative">
-                    <img src="./assests/Retângulo 2398 (1).png" alt="Gold Bangles" class="w-full h-44 object-cover rounded-lg">
-                    <div class="discount-tag">10% OFF</div>
-                    <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
-                        <button class="buy-now-btn">Buy Now</button>
-                        <button class="cart-btn">🛒</button>
-                    </div>
-                    <button class="whatsapp-btn absolute right-3 top-12">📱</button>
-                </div>
-                <div class="mt-2">
-                    <p class="text-sm font-medium">Product item title name</p>
-                    <div class="flex items-center">
-                        <p class="text-xs line-through text-gray-500">₹100</p>
-                        <p class="text-sm font-bold text-blue-600 ml-1">₹80</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Product 3 -->
-            <div class="relative mb-4">
-                <div class="relative">
-                    <img src="./assests/Retângulo 2398.png" alt="Gold Bangles" class="w-full h-44 object-cover rounded-lg">
-                    <div class="dimension-tag">25 × 16</div>
-                    <div class="discount-tag">10% OFF</div>
-                    <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
-                        <button class="buy-now-btn">Buy Now</button>
-                        <button class="cart-btn">🛒</button>
-                    </div>
-                </div>
-                <div class="mt-2">
-                    <p class="text-sm font-medium">Product item title name</p>
-                    <div class="flex items-center">
-                        <p class="text-xs line-through text-gray-500">₹100</p>
-                        <p class="text-sm font-bold text-blue-600 ml-1">₹80</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Product 4 -->
-            <div class="relative mb-4">
-                <div class="relative">
-                    <img src="./assests//Retângulo 2398 1.png" alt="Gold Necklace" class="w-full h-44 object-cover rounded-lg">
                     <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
                         <button class="buy-now-btn">Buy Now</button>
                         <button class="cart-btn">🛒</button>
@@ -454,8 +418,8 @@
     </div>
     
     <!-- Customer Testimonials -->
-    <div class="px-4 py-6">
-        <h2 class="text-xl font-bold mb-4">What Customers Say About</h2>
+    <div class="px-4 py-4 w-full max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold mb-4 text-center">What Customers Say About</h2>
         
         <div class="bg-gray-50 rounded-lg p-6 mb-4">
             <h3 class="text-center font-medium mb-2">Person Name</h3>
@@ -476,6 +440,7 @@
             <span class="pagination-dot"></span>
         </div>
     </div>
+    
     
     <!-- Newsletter -->
     <div class="px-4 py-4">
@@ -559,4 +524,5 @@
         </div>
     </div>
 </body>
+<script src="./script.js"></script>
 </html>
