@@ -159,4 +159,90 @@
         
             renderProducts();
         });
-        
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const products = document.querySelectorAll(".product-grid > div");
+            const dots = document.querySelectorAll(".pagination-dot");
+            let itemsPerPage = window.innerWidth < 768 ? 2 : 4;
+            let currentPage = 0;
+    
+            function showPage(pageIndex) {
+                products.forEach((item, index) => {
+                    item.style.display = (index >= pageIndex * itemsPerPage && index < (pageIndex + 1) * itemsPerPage) ? "block" : "none";
+                });
+    
+                dots.forEach(dot => dot.classList.remove("active"));
+                dots[pageIndex].classList.add("active");
+            }
+    
+            dots.forEach(dot => {
+                dot.addEventListener("click", function () {
+                    currentPage = parseInt(this.getAttribute("data-index"));
+                    showPage(currentPage);
+                });
+            });
+    
+            window.addEventListener("resize", () => {
+                itemsPerPage = window.innerWidth < 768 ? 2 : 4;
+                showPage(currentPage);
+            });
+    
+            showPage(currentPage);
+        });
+
+
+        const products = Array.from({ length: 20 }, (_, i) => ({
+            title: `Product ${i + 1}`,
+            image: "./assets/1 1.png",
+            oldPrice: 100,
+            newPrice: 80
+        }));
+
+        const itemsPerPage = 8;
+        let currentPage = 0;
+
+        function renderGrid() {
+            const grid = document.getElementById("grid");
+            grid.innerHTML = "";
+            const start = currentPage * itemsPerPage;
+            const end = start + itemsPerPage;
+            const paginatedItems = products.slice(start, end);
+
+            paginatedItems.forEach(product => {
+                const div = document.createElement("div");
+                div.className = "relative mb-4";
+                div.innerHTML = `
+                    <div class="relative">
+                        <img src="${product.image}" alt="${product.title}" class="w-full h-44 object-cover rounded-lg">
+                        <div class="absolute bottom-3 left-0 right-0 flex justify-between px-3">
+                            <button class="buy-now-btn">Buy Now</button>
+                            <button class="cart-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-sm font-medium">${product.title}</p>
+                        <div class="flex items-center">
+                            <p class="text-xs line-through text-gray-500">₹${product.oldPrice}</p>
+                            <p class="text-sm font-bold text-blue-600 ml-1">₹${product.newPrice}</p>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(div);
+            });
+
+            document.getElementById("prevBtn").disabled = currentPage === 0;
+            document.getElementById("nextBtn").disabled = end >= products.length;
+        }
+
+        function nextPage() {
+            currentPage++;
+            renderGrid();
+        }
+
+        function prevPage() {
+            currentPage--;
+            renderGrid();
+        }
+
+        renderGrid();
